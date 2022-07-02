@@ -20,6 +20,7 @@ int main(void)
 			if (e != i && e < i)
 			{
 				putchar(e);
+				putchar(i);
 				putchar(',');
 				putchar(' ');
 			}
