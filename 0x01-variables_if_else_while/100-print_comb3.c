@@ -19,6 +19,7 @@ int main(void)
 		{
 			if (e != i && e < i)
 			{
+				putchar('e');
 				putchar(',');
 				putchar(' ');
 			}
