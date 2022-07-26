@@ -10,7 +10,6 @@
  */
 
 int **alloc_grid(int width, int height)
-
 {
 	int **array;
 	int i = 0, j;
@@ -38,11 +37,11 @@ int **alloc_grid(int width, int height)
 				free(array);
 				return (NULL);
 			}
-
-			return (array);
 		}
-		else
-		{
-			return (NULL);
-		}
+		return (array);
 	}
+	else
+	{
+		return (NULL);
+	}
+}
