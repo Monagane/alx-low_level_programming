@@ -31,13 +31,12 @@ int find_len(char *str)
  * function exits with a status of 98.
  * Return: A pointer to the array.
  */
-
 char *create_xarray(int size)
 {
 	char *array;
 	int index;
 
-	array = malloc(sizeof(char)size);
+	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
 		exit(98);
@@ -57,7 +56,6 @@ char *create_xarray(int size)
  *
  * Return: A pointer to the next non-zero element.
  */
-
 char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
@@ -71,10 +69,9 @@ char *iterate_zeroes(char *str)
  * @c: The character to be converted.
  *
  * Description: If c is a non-digit, the function
- *   exits with a status of 98.
- *   Return: The converted int.
+ * exits with a status of 98.
+ * Return: The converted int.
  */
-
 int get_digit(char c)
 {
 	int digit = c - '0';
@@ -95,8 +92,8 @@ int get_digit(char c)
  * @digit: The single digit.
  * @zeroes: The necessary number of leading zeroes.
  *
- *  Description: If mult contains a non-digit, the function
- *               exits with a status value of 98.
+ * Description: If mult contains a non-digit, the function
+ * exits with a status value of 98.
  */
 void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
@@ -127,7 +124,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 			exit(98);
 		}
 
-		num = (*mult - '0')digit;
+		num = (*mult - '0') * digit;
 		num += tens;
 		*prod = (num % 10) + '0';
 		tens = num / 10;
@@ -143,7 +140,6 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
  * @next_prod: The next product to be added.
  * @next_len: The length of next_prod.
  */
-
 void add_nums(char *final_prod, char *next_prod, int next_len)
 {
 	int num, tens = 0;
@@ -185,9 +181,9 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * @argv: The number of arguments passed to the program.
  * @argc: An array of pointers to the arguments.
  *
- *  Description: If the number of arguments is incorrect or one number
- *               contains non-digits, the function exits with a status of 98.
- *               Return: Always 0.
+ * Description: If the number of arguments is incorrect or one number
+ * contains non-digits, the function exits with a status of 98.
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
@@ -232,3 +228,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+
